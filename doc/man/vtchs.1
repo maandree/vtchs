@@ -1,0 +1,42 @@
+.TH VTCHS 1 VTCHS
+.SH NAME
+vtchs \- Listen for VT switches
+.SH ETYMOLOGY
+.IR v irtual
+.IR t erminal
+.IR ch ange s
+.SH SYNOPSIS
+.B vtchs
+.SH DESCRIPTION
+.B vtchs
+ignores all arguments. You must have set
+stdin to be a
+.B /dev/tty
+device.
+.PP
+When
+.B vtchs
+starts, it prints the number of the
+currently active console. Then, in an infinite
+loop, it waits for the user to change console,
+and prints the number of the newly active console
+when this happens.
+.SH RATIONALE
+Sometimes you need to be able to know which
+console is in the foreground, and stay up to
+date on this. In particular, I want to be able
+to record the output on the mintors, and have
+it detect VT switches, so it can select the
+appropriate method and display; and I want to
+be able to have VT dependent colour adjustments.
+.SH SEE ALSO
+.BR fgconsole (1),
+.BR chvt (1)
+.SH AUTHORS
+Principal author, Mattias Andrée.  See the LICENSE file for the full
+list of authors.
+.SH LICENSE
+MIT/X Consortium License.
+.SH BUGS
+Please report bugs to https://github.com/maandree/vtchs/issues or to
+maandree@member.fsf.org
