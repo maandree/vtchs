@@ -14,4 +14,6 @@ _/
 *.o
 *.su
 *.gch
+/Makefile
+/config.status
 
