@@ -1,0 +1,27 @@
+NAME
+	vtchs - Listen for VT switches
+
+ETYMOLOGY
+	(v)irtual (t)erminal (ch)ange(s)
+
+SYNOPSIS
+	vtchs
+
+DESCRIPTION
+	vtchs ignores all arguments. You must have set
+	stdin to be a /dev/tty device.
+
+	When vtchs starts, it prints the number of the
+	currently active console. Then, in an infinite
+	loop, it waits for the user to change console,
+	and prints the number of the newly active console
+	when this happens.
+
+RATIONALE
+	Sometimes you need to be able to know which
+	console is in the foreground, and stay up to
+	date on this.
+
+SEE ALSO
+	fgconsole(1), chvt(1)
+
