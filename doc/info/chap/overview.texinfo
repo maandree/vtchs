@@ -1,0 +1,9 @@
+@node Overview
+@chapter Overview
+
+When @command{vtchs} starts, it prints the
+number of the current console in the foreground.
+Then, in an infinite loop, it waits for the user
+to change console, and prints the number of the
+new foregorund console when this happens.
+
