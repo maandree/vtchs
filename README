@@ -20,7 +20,11 @@ DESCRIPTION
 RATIONALE
 	Sometimes you need to be able to know which
 	console is in the foreground, and stay up to
-	date on this.
+	date on this. In particular, I want to be able
+	to record the output on the mintors, and have
+	it detect VT switches, so it can select the
+	appropriate method and display; and I want to
+	be able to have VT dependent colour adjustments.
 
 SEE ALSO
 	fgconsole(1), chvt(1)
