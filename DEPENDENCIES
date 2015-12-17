@@ -1,0 +1,20 @@
+RUNTIME DEPENDENCIES
+
+	libc
+	linux
+
+
+BUILD DEPENDENCIES
+
+	libc
+	linux-api-headers
+	cc
+	make
+	coreutils
+
+
+INSTALL DEPENDENCIES
+
+	make
+	coreutils
+
