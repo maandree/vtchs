@@ -5,8 +5,8 @@ include $(CONFIGFILE)
 
 all: vtchs
 
-.o:
-	$(CC) -o $@ $^ $(LDFLAGS)
+vtchs: vtchs.o
+	$(CC) -o $@ vtchs.o $(LDFLAGS)
 
 .c.o:
 	$(CC) -c -o $@ $< $(CPPFLAGS) $(CFLAGS)
@@ -25,8 +25,9 @@ uninstall:
 	-rm -rf -- "$(DESTDIR)$(PREFIX)/share/licenses/vtchs"
 
 clean:
-	-rm -f - vtchs *o
+	-rm -f -- vtchs *.o
 
-.SUFFIXES: .o .c.o
+.SUFFIXES:
+.SUFFIXES: .o .c
 
 .PHONY: all install uninstall clean
