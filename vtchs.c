@@ -27,7 +27,7 @@ main(int argc, char *argv[])
 	struct vt_stat s;
 
 	argv0 = *argv++, argc--;
-	if (argc != (*argv && !strcmp(*argv, "=="))) {
+	if (argc != (*argv && !strcmp(*argv, "--"))) {
 		fprintf(stderr, "usage: %s\n", argv0);
 		exit(1);
 	}
