@@ -14,15 +14,12 @@ vtchs: vtchs.o
 install: vtchs
 	mkdir -p -- "$(DESTDIR)$(PREFIX)/bin"
 	mkdir -p -- "$(DESTDIR)$(MANPREFIX)/man1"
-	mkdir -p -- "$(DESTDIR)$(PREFIX)/share/licenses/vtchs"
 	cp -- vtchs "$(DESTDIR)$(PREFIX)/bin/"
 	cp -- vtchs.1 "$(DESTDIR)$(MANPREFIX)/man1/"
-	cp -- LICENSE "$(DESTDIR)$(PREFIX)/share/licenses/vtchs/"
 
 uninstall:
 	-rm -f -- "$(DESTDIR)$(PREFIX)/bin/vtchs"
 	-rm -f -- "$(DESTDIR)$(MANPREFIX)/man1/vtchs.1"
-	-rm -rf -- "$(DESTDIR)$(PREFIX)/share/licenses/vtchs"
 
 clean:
 	-rm -f -- vtchs *.o
