@@ -12,7 +12,7 @@
 static char *argv0;
 
 static void
-vt(int op, void *arg, const char *opstr)
+vt(unsigned long int op, void *arg, const char *opstr)
 {
 	if (ioctl(STDIN_FILENO, op, arg) == -1) {
 		fprintf(stderr, "%s: ioctl <stdin> %s: %s\n", argv0, opstr, strerror(errno));
